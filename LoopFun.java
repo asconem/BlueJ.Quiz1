@@ -50,7 +50,14 @@ public class LoopFun
       public String encrypt(String word) {
           String str = "";
           for (int i = 0; i < word.length(); i++) {
+             char ch = word.charAt(i);
+             if (ch != ' ') {
+             ch = (char)((ch - 'A' - 3) % 26 + 'A');
              
         }
+        
+        str += ch;
       }
+      return str.toLowerCase();
+    }
 }
